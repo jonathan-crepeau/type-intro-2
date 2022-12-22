@@ -14,3 +14,9 @@ function greet(name: string) {
 
 console.log(greet("Jonathan"));
 console.log(greet('42'));
+
+function favNum(): number {
+    return 17;
+}
+
+const myFavNum = ():number => 7;
