@@ -1,12 +1,16 @@
-console.log('This that pink venom..');
+console.log('Fear is the mindkiller..');
 
-function printName(obj: {first: string; last?: string}) {
-    if (obj.last) {
-        return `Hello, my full name is ${obj.first} ${obj.last}`;
-    } else {
-        return `Hello, my name is ${obj.first}`;
-    }
-};
+// SECTION - Type Annotations On Variables
 
-console.log(printName({first: "Jonathan"}));
-console.log(printName({first: "Jonathan", last: "Crepeau"}));
+const firstName = "Jonathan";
+let myName: string = "Jonathan";
+
+
+// SECTION - Function Type Annoations
+
+function greet(name: string) {
+    console.log(`Hello, ${name.toUpperCase()}!!!`);
+}
+
+console.log(greet("Jonathan"));
+console.log(greet('42'));
