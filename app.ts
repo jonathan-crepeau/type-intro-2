@@ -29,11 +29,12 @@ const names = ["Jonathan", "Jeremy", "Luna"];
 // names.forEach((name) => console.log(name.toUpperCase()));
 
 
-// SECTION - Array type annotations
+// SECTION - Array Type Annotations
 
-// NOTE - Within an object
-
-const myObject = {
-    favNums: Array<number>,
-    location: "San Francisco, CA, USA"
+function printEachArrayItem(arr1: Array<number>) {
+    arr1.map((arrItem) => console.log(arrItem + 10));
 };
+
+
+printEachArrayItem([1, 4, 76]);
+// printEachArrayItem(["Jonathan", "Jeremy", "Luna"]);
