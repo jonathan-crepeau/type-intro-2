@@ -37,5 +37,13 @@ function welcomePeople(x) {
 function getFirstThreee(x) {
     return x.slice(0, 3);
 }
-console.log(getFirstThreee([3, 27, 88]));
-console.log(getFirstThreee('Jonathan'));
+function printCoordinates(pt) {
+    console.log(`The coordinate's x values is ${pt.x}`);
+    console.log(`The coordinate's y value is ${pt.y}`);
+}
+printCoordinates({ x: 100, y: 237 });
+function shoutTheId(id) {
+    console.log(`My ID is ${id}!`);
+}
+shoutTheId('Jonathan');
+shoutTheId(42);

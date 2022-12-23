@@ -53,3 +53,33 @@ function getFirstThreee(x: number[] | string) {
 
 // console.log(getFirstThreee([3, 27, 88]));
 // console.log(getFirstThreee('Jonathan'));
+
+
+// SECTION Type Aliases
+
+// NOTE Instead of hard-writing types directly into objects or as parameters in functions, we can create type aliases to use the same type more than once and refer to it by a single name.
+
+type Point = {
+    x: number;
+    y: number;
+};
+
+function printCoordinates(pt: Point) {
+    console.log(`The coordinate's x values is ${pt.x}`);
+    console.log(`The coordinate's y value is ${pt.y}`);
+}
+
+printCoordinates({x: 100, y: 237});
+
+
+// NOTE - You can use a type alias to give a name to ANY type at all, including a union type (below):
+
+type ID = string | number;
+
+function shoutTheId(id: ID) {
+    console.log(`My ID is ${id}!`);
+}
+
+shoutTheId('Jonathan');
+shoutTheId(42);
+
