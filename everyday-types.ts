@@ -83,3 +83,5 @@ function shoutTheId(id: ID) {
 shoutTheId('Jonathan');
 shoutTheId(42);
 
+// NOTE - Note that aliases are ONLY aliases -- you cannot use type aliases to create different / distinct "versions" of the same type. When you use the alias, it's exactly as if you had written the aliased type. In other words, this code might look illegal, but is OK according to TypeScript because both types are aliases for the same type:
+// NOTE - Follow up with note on dynamic programming.

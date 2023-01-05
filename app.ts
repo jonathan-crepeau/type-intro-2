@@ -8,6 +8,7 @@ let myName: string = "Jonathan";
 
 // SECTION - Function Type Annoations
 
+// NOTE - Parameter Type Annotations
 function greet(name: string) {
     return `Hello, ${name.toUpperCase()}!!!`;
 }

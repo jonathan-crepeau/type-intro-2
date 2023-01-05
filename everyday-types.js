@@ -38,12 +38,12 @@ function getFirstThreee(x) {
     return x.slice(0, 3);
 }
 function printCoordinates(pt) {
-    console.log(`The coordinate's x values is ${pt.x}`);
-    console.log(`The coordinate's y value is ${pt.y}`);
+    console.log("The coordinate's x values is ".concat(pt.x));
+    console.log("The coordinate's y value is ".concat(pt.y));
 }
 printCoordinates({ x: 100, y: 237 });
 function shoutTheId(id) {
-    console.log(`My ID is ${id}!`);
+    console.log("My ID is ".concat(id, "!"));
 }
 shoutTheId('Jonathan');
 shoutTheId(42);
