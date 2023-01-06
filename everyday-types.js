@@ -33,17 +33,26 @@ function welcomePeople(x) {
 }
 // welcomePeople(["Jonathan", "Jeremy", "Luna"]);
 // welcomePeople('Jonathan');
+var benderWelcome = function (x) {
+    if (Array.isArray(x)) {
+        console.log('Hello, ' + x.join(" and ") + '!');
+    }
+    else {
+        console.log('Welcome, lone bender ' + x + '!');
+    }
+};
+// benderWelcome(['Korra', 'Mako', 'Bolin']);
+// benderWelcome('Tenzin');
 // NOTE Sometimes, you'll have a union where all the members have something in common. For example, both ARRAYS and STRINGS have a 'slice' method. If every member in a union has a property name in common, you can use that property without narrowing:
 function getFirstThreee(x) {
     return x.slice(0, 3);
 }
-function printCoordinates(pt) {
-    console.log("The coordinate's x values is ".concat(pt.x));
-    console.log("The coordinate's y value is ".concat(pt.y));
-}
-printCoordinates({ x: 100, y: 237 });
-function shoutTheId(id) {
-    console.log("My ID is ".concat(id, "!"));
-}
-shoutTheId('Jonathan');
-shoutTheId(42);
+var printCoordinates = function (pt) {
+    console.log("The coordinate's x value is ".concat(pt.x, "."));
+    console.log("The coordinate's y value is ".concat(pt.y, "."));
+};
+var printTheId = function (id) {
+    console.log("The id is ".concat(id, "."));
+};
+printTheId(24);
+printTheId('__jonathanC');

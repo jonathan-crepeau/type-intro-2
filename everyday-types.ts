@@ -45,6 +45,19 @@ function welcomePeople(x: string[] | string) {
 // welcomePeople(["Jonathan", "Jeremy", "Luna"]);
 // welcomePeople('Jonathan');
 
+const benderWelcome = (x: string[] | string) => {
+    if (Array.isArray(x)) {
+        console.log('Hello, ' + x.join(" and ") + '!');
+    } else {
+        console.log('Welcome, lone bender ' + x + '!');
+    }
+}
+
+// benderWelcome(['Korra', 'Mako', 'Bolin']);
+// benderWelcome('Tenzin');
+
+
+
 // NOTE Sometimes, you'll have a union where all the members have something in common. For example, both ARRAYS and STRINGS have a 'slice' method. If every member in a union has a property name in common, you can use that property without narrowing:
 
 function getFirstThreee(x: number[] | string) {
@@ -57,31 +70,28 @@ function getFirstThreee(x: number[] | string) {
 
 // SECTION Type Aliases
 
-// NOTE Instead of hard-writing types directly into objects or as parameters in functions, we can create type aliases to use the same type more than once and refer to it by a single name.
+// NOTE - So far, we've been using object types and union types by writing them directly in type annotations. This is convenient, but it's common to want to use the same type more than once and refer to it by a single name. A type alias is exactly that -- a name for any type.
 
+// NOTE - Example: giving a name to an object type:
 type Point = {
     x: number;
     y: number;
 };
 
-function printCoordinates(pt: Point) {
-    console.log(`The coordinate's x values is ${pt.x}`);
-    console.log(`The coordinate's y value is ${pt.y}`);
+const printCoordinates = (pt: Point) => {
+    console.log(`The coordinate's x value is ${pt.x}.`);
+    console.log(`The coordinate's y value is ${pt.y}.`);
 }
 
-printCoordinates({x: 100, y: 237});
+// printCoordinates({x: 102, y: 300});
 
 
-// NOTE - You can use a type alias to give a name to ANY type at all, including a union type (below):
+// NOTE Example: giving a name to a union type:
+type ID = number | string;
 
-type ID = string | number;
-
-function shoutTheId(id: ID) {
-    console.log(`My ID is ${id}!`);
+const printTheId = (id: ID) => {
+    console.log(`The id is ${id}.`);
 }
 
-shoutTheId('Jonathan');
-shoutTheId(42);
-
-// NOTE - Note that aliases are ONLY aliases -- you cannot use type aliases to create different / distinct "versions" of the same type. When you use the alias, it's exactly as if you had written the aliased type. In other words, this code might look illegal, but is OK according to TypeScript because both types are aliases for the same type:
-// NOTE - Follow up with note on dynamic programming.
+// printTheId(24);
+// printTheId('__jonathanC');
