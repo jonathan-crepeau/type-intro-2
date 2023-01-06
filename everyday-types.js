@@ -54,5 +54,8 @@ var printCoordinates = function (pt) {
 var printTheId = function (id) {
     console.log("The id is ".concat(id, "."));
 };
-printTheId(24);
-printTheId('__jonathanC');
+var printTheCoordinates = function (pt) {
+    console.log("The coordinate's x value is ".concat(pt.x, "."));
+    console.log("The coordinate's y value is ".concat(pt.y, "."));
+};
+printTheCoordinates({ x: 200, y: 4002 });

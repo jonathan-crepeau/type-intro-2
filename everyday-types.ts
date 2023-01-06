@@ -95,3 +95,20 @@ const printTheId = (id: ID) => {
 
 // printTheId(24);
 // printTheId('__jonathanC');
+
+
+// SECTION Interfaces
+
+// NOTE An interface decleration is another way to name an object type:
+
+interface thePoint {
+    x: number;
+    y: number;
+}
+
+const printTheCoordinates = (pt: thePoint) => {
+    console.log(`The coordinate's x value is ${pt.x}.`);
+    console.log(`The coordinate's y value is ${pt.y}.`);
+}
+
+printTheCoordinates({x: 200, y: 4002});
