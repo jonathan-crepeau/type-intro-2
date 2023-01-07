@@ -164,3 +164,27 @@ function compare(a: string, b: string): -1 | 0 | 1 {
 // console.log(compare('aaah', 'New Hampshire'))
 // console.log(compare('california', 'California'));
 // console.log(compare('California', 'California'));
+
+
+// NOTE You can combine literal types with non-literal types:
+
+interface Options {
+    width: number;
+}
+
+function configure(x: Options | "auto") {
+    // some code..
+}
+
+// configure({width: 100});
+// configure('auto');
+// configure('automatic');
+
+
+// SECTION Literal Inference
+// SECTION null & undefined
+// SECTION enums
+// SECTION Less Common Primitives
+// NOTE - See Google Drive ("[Handbook] - Everyday Types") for for info.
+
+
